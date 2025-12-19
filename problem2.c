@@ -1,20 +1,12 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-
-int get_gcd(int x, int y)
-{
-    if (y == 0)
-        return x;
-    else
-        return get_gcd(y, x % y);
-}
+#define ABS(x) (((x) < (0)) ? (-(x)) : (x))
 
 int main(void)
 {
-    int a, b;
-    printf("Enter two integers (large, small): ");
-    scanf("%d %d", &a, &b);
-
-    printf("GCD = %d", get_gcd(a, b));
+    int N;
+    printf("Enter an integer: ");
+    scanf("%d", &N);
+    printf("Absolute = %d", ABS(N));
     return 0;
 }
