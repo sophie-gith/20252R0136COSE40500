@@ -1,20 +1,13 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-unsigned long long fact_calc(int x)
-{
-    if (x <= 1)
-        return 1;
-    else
-        return x * fact_calc(x - 1);
-}
+#define MAX(a, b) ( ((a) > (b)) ? (a) : (b) )
 
 int main(void)
 {
-    int n;
-    printf("Enter an integer: ");
-    scanf("%d", &n);
-
-    printf("Factorial = %llu", fact_calc(n));
+    int a, b;
+    printf("Enter two integers: ");
+    scanf("%d %d", &a, &b);
+    printf("Maximum = %d", MAX(a, b));
     return 0;
 }
